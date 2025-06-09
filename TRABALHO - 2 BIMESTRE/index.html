@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Calculadoras</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav>
+    <ul>
+      <li><button onclick="showSection('triangulo')">Triângulo</button></li>
+      <li><button onclick="showSection('imc')">Calculadora IMC</button></li>
+      <li><button onclick="showSection('imposto')">Imposto Veículo</button></li>
+      <li><button onclick="showSection('salario')">Aumento Salário</button></li>
+      <li><button onclick="showSection('credito')">Crédito Bancário</button></li>
+      <li><button onclick="showSection('lanche')">Pedido Lanchonete</button></li>
+      <li><button onclick="showSection('vendas')">Sistema de Vendas</button></li>
+      <li><button onclick="showSection('professor')">Pagamento Professor</button></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section id="triangulo" class="active">
+      <h2>1. Verificar Triângulo</h2>
+      <div class="form-group">
+        <label>Lado X:</label>
+        <input type="number" id="triX" min="0" step="any" />
+      </div>
+      <div class="form-group">
+        <label>Lado Y:</label>
+        <input type="number" id="triY" min="0" step="any" />
+      </div>
+      <div class="form-group">
+        <label>Lado Z:</label>
+        <input type="number" id="triZ" min="0" step="any" />
+      </div>
+      <button onclick="ex1()">Verificar Triângulo</button>
+      <p class="result" id="res1"></p>
+    </section>
+
+    <section id="imc">
+      <h2>2. Calculadora IMC</h2>
+      <div class="form-group">
+        <label>Peso (kg):</label>
+        <input type="number" id="imcPeso" min="0" step="any" />
+      </div>
+      <div class="form-group">
+        <label>Altura (m):</label>
+        <input type="number" id="imcAltura" min="0" step="0.01" />
+      </div>
+      <button onclick="ex2()">Calcular IMC</button>
+      <p class="result" id="res2"></p>
+    </section>
+
+    <section id="imposto">
+      <h2>3. Calculadora de Imposto de Veículo</h2>
+      <div class="form-group">
+        <label>Ano do carro:</label>
+        <input type="number" id="impAno" min="1900" max="2100" />
+      </div>
+      <div class="form-group">
+        <label>Valor tabela (R$):</label>
+        <input type="number" id="impValor" min="0" step="0.01" />
+      </div>
+      <button onclick="ex3()">Calcular Imposto</button>
+      <p class="result" id="res3"></p>
+    </section>
+
+    <section id="salario">
+      <h2>4. Calculadora de Aumento de Salário</h2>
+      <div class="form-group">
+        <label>Salário atual (R$):</label>
+        <input type="number" id="salarioAntigo" min="0" step="0.01" />
+      </div>
+      <div class="form-group">
+        <label>Cargo:</label>
+        <input type="text" id="cargoFunc" placeholder="gerente, engenheiro, técnico" />
+      </div>
+      <button onclick="ex4()">Calcular Novo Salário</button>
+      <p class="result" id="res4"></p>
+    </section>
+
+    <section id="credito">
+      <h2>5. Calculadora de Crédito Bancário</h2>
+      <div class="form-group">
+        <label>Saldo médio (R$):</label>
+        <input type="number" id="saldoMed" min="0" step="0.01" />
+      </div>
+      <button onclick="ex5()">Calcular Crédito</button>
+      <p class="result" id="res5"></p>
+    </section>
+
+    <section id="lanche">
+      <h2>6. Pedido Lanchonete</h2>
+      <div class="form-group">
+        <label>Código do item (100 a 105):</label>
+        <input type="number" id="codLanche" min="100" max="105" />
+      </div>
+      <div class="form-group">
+        <label>Quantidade:</label>
+        <input type="number" id="qtdeLanche" min="1" />
+      </div>
+      <button onclick="ex6()">Calcular Total</button>
+      <p class="result" id="res6"></p>
+    </section>
+
+    <section id="vendas">
+      <h2>7. Sistema de Vendas</h2>
+      <div class="form-group">
+        <label>Preço do produto (R$):</label>
+        <input type="number" id="precoProd" min="0" step="0.01" />
+      </div>
+      <div class="form-group">
+        <label>Condição de pagamento:</label>
+        <select id="condPag">
+          <option value="a">À vista dinheiro/cheque (10% desconto)</option>
+          <option value="b">À vista cartão (15% desconto)</option>
+          <option value="c">2x sem juros</option>
+          <option value="d">2x com 10% juros</option>
+        </select>
+      </div>
+      <button onclick="ex7()">Calcular Valor</button>
+      <p class="result" id="res7"></p>
+    </section>
+
+    <section id="professor">
+      <h2>8. Pagamento do Professor</h2>
+      <div class="form-group">
+        <label>Nível do professor:</label>
+        <select id="nivelProf">
+          <option value="1">Nível 1 (R$12/hora)</option>
+          <option value="2">Nível 2 (R$17/hora)</option>
+          <option value="3">Nível 3 (R$25/hora)</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Horas/aula por semana:</label>
+        <input type="number" id="horasAula" min="0" step="any" />
+      </div>
+      <button onclick="ex8()">Calcular Salário</button>
+      <p class="result" id="res8"></p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
