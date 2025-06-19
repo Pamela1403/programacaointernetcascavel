@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <title>Calcular Exercícios</title>
+</head>
+<body>
+
+    <h1>Calcular Troco</h1>
+    <input type="number" id="valorPago" step="0.01" placeholder="valor pago ($)"><br><br>
+    <input type="number" id="precoProduto" step="0.01" placeholder="Preço do Produto ($)"><br><br>
+    <button onclick="calcularTroco()">Calcular Troco</button>
+    <h2 id="resultado1"></h2>
+
+    <hr>
+
+    <h1>Calcular Valor Total</h1>
+    <input type="number" id="valorQuilo" step="0.01" placeholder="Valor do quilo (R$)"><br><br>
+    <input type="number" id="quantidade" step="0.01" placeholder="Quantidade em quilos"><br><br>
+    <button onclick="calcular()">Calcular</button>
+    <h2 id="resultado2"></h2>
+
+    <hr>
+
+    <h1>Reajuste de Saldo</h1>
+    <input type="number" id="saldo" step="0.01" placeholder="Saldo atual (R$)"><br><br>
+    <button onclick="calcularReajuste()">Calcular Reajuste</button>
+    <h2 id="resultado3"></h2>
+
+    <hr>
+
+    <h1>Calcular Média Aritmética</h1>
+    <input type="number" id="num1" step="0.01" placeholder="Número 1"><br><br>
+    <input type="number" id="num2" step="0.01" placeholder="Número 2"><br><br>
+    <input type="number" id="num3" step="0.01" placeholder="Número 3"><br><br>
+    <button onclick="calcularMedia()">Calcular Média</button>
+    <h2 id="resultado4"></h2>
+
+    <hr>
+
+    
+    <h1>Maior entre 2 valores</h1>
+    <input type="number" id="valorA" placeholder="Valor A"><br><br>
+    <input type="number" id="valorB" placeholder="Valor B"><br><br>
+    <button onclick="calcularMaior()">Calcular Maior</button>
+    <h2 id="resultado5"></h2>
+
+    <hr>
+
+  
+    <h1>Menor entre 4 valores</h1>
+    <input type="number" id="val1" placeholder="Valor 1"><br><br>
+    <input type="number" id="val2" placeholder="Valor 2"><br><br>
+    <input type="number" id="val3" placeholder="Valor 3"><br><br>
+    <input type="number" id="val4" placeholder="Valor 4"><br><br>
+    <button onclick="calcularMenor()">Calcular Menor</button>
+    <h2 id="resultado6"></h2>
+
+    <hr>
+
+    <h1>Verificar se número é ímpar</h1>
+    <input type="number" id="numeroImpar" placeholder="Número"><br><br>
+    <button onclick="verificarImpar()">Verificar</button>
+    <h2 id="resultado7"></h2>
+
+    <script src="script.js"></script>
+</body>
+</html>
